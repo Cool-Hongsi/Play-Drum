@@ -7,7 +7,8 @@
     "start": "node server.js",
     "server": "node server.js",
     "sound": "npm start --prefix sound",
-    "dev": "concurrently \"npm run server\" \"npm run sound\""
+    "dev": "concurrently \"npm run server\" \"npm run sound\"",
+    "heroku-postbuild": "cd sound/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "",
   "license": "ISC",
