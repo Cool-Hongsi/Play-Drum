@@ -16,7 +16,7 @@ export default class Sound extends React.Component{
     }
 
     componentDidMount(){
-        fetch('/api/sound').then((res) => {
+        fetch('/api/soundlist').then((res) => {
             res.json().then((data) => {
                 this.setState({
                     items : data
